@@ -38,12 +38,12 @@ char* reverse (char * string){
 }
 
 
-int main(int argc, char* argv[]){	
+int main(int argc, char** argv ){	
 	char * string;
 	if(argc == 2) { //Correct number of arguments
 	string = argv[1];
 	} else {
-		printf("Ivalid input. Please enter only the string to reverse\n");
+		printf("Invalid input. Please enter only the string to reverse\n");
 		return 1;
 	}
 
