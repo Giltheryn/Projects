@@ -1,6 +1,6 @@
 // Reverse string of text entered from stdin
-#ifndef REVERSE_H_
-#define REVERSE_H_
+#ifndef REVERSE_H
+#define REVERSE_H
 #endif 
 size_t getLength(char*);
 int copyString(char*,char*);
