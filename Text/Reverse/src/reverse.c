@@ -12,22 +12,11 @@ size_t getLength(char * string){
 }
 return length;
 }
-int copyString(char* string1, char* string2){
-	int i;
-	if(getLength(string2) < getLength(string1)){
-		return -1; //String 2 is not big enough
-	}
-	for (i = 0; i < getLength(string1)+1;i++){
-		string2[i] = string1[i];
-	}
-	return 0; 
-}
 char* reverse (char * string){
 	int length = getLength(string); 
     char* buffer = (char*) malloc(sizeof(char) * length +1);
     char* reversed = memcpy(buffer,string,length);//Allocate space for a copy of string
-	assert(!copyString(string,reversed)); // Ensure sucessful copy	
-    int string_index;
+	int string_index;
 	int reversed_index = length - 1; //Offset for array indexing. Otherwise we overwrite the null character, causing problems
     for (string_index = 0; string_index<length; string_index++) {// Reverse character by character
 	
