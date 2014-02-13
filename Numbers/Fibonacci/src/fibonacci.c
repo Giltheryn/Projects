@@ -20,21 +20,24 @@ return a;
 }
 
 int main(int argc, char** argv){
-    unsigned long num;
+    unsigned int num;
     if(argc == 2){
-    char* input = argv[1];
-    num = strtol(input,NULL,10);
-    if(num == 0L || num > 1000){
-        printf("Invalid number. Number must be a positive integer in range 1-1000\n");
-        return 1;
-        }
-    } else {
+        char* input = argv[1];
+        num = strtol(input,NULL,10);
+        if(num == 0L || num > 1000){
+             printf("Invalid number. Number must be a positive integer in range              1-1000\n");
+             return 1;
+         }
+    }
+    else { //Wrong number of args
         printf("Invalid arguments. Usage: fibonnaci [number]\n");
         return 1;
         }
-    int i;
+    unsigned int i;
     printf("Fibonacci Numbers:\n"); 
     for (i=1; i<=num; i++){
     printf("#%d: %lu\n",i,fibonacci(i));
     }
+return 0;
 }
+
